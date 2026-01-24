@@ -10,7 +10,7 @@ public class TestNameEmailReviewScreen {
     WaitHelper wait;
     By emailxpath=By.xpath("//android.widget.EditText[@text='xx@xx.com']");
     By fnamexpath=By.xpath("//android.widget.EditText[@text='fname']");
-    By lname=By.xpath("//android.widget.EditText[@text='fname']");
+    By lname=By.xpath("//android.widget.EditText[@text='lname']");
     By EditXpath=By.xpath("//android.widget.Button[@text=\"Edit\"]");
 
     public TestNameEmailReviewScreen(WebDriver driver, WaitHelper wait){
