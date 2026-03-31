@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.WaitHelper;
 
-public class eventsScreen {
+public class AlleventsScreen {
     WebDriver driver;
     WaitHelper wait;
     By allowNotificationXpath = By.xpath("//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]");
@@ -13,7 +13,7 @@ public class eventsScreen {
     By evEventXpath=By.xpath("//android.widget.Image[@text=\"bg3\"]");
     By leadslinkXpath =By.xpath("(//android.widget.Button[@text=\"Leads\"])[1]");
 
-    public eventsScreen(WebDriver driver,WaitHelper wait) {
+    public AlleventsScreen(WebDriver driver, WaitHelper wait) {
         this.driver = driver;
         this.wait =wait;
     }
@@ -30,9 +30,9 @@ public class eventsScreen {
         wait.waitForVisibility(evEventXpath,10).click();
     }
 
-    public TestNameEmailLeadsScreen clickleadsArrow(){
+    public AllLeads clickleadsArrow(){
         wait.waitForVisibility(leadslinkXpath,10).click();
-        return new TestNameEmailLeadsScreen(driver,wait);
+        return new AllLeads(driver,wait);
     }
 
 }

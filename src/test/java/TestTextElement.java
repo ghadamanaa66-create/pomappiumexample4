@@ -1,9 +1,7 @@
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.TestNameEmailLeadsScreen;
-import pages.TestNameEmailReviewScreen;
-import pages.eventsScreen;
+import pages.AlleventsScreen;
 import pages.insertAuthScreen;
 
 import java.net.MalformedURLException;
@@ -19,7 +17,7 @@ public class TestTextElement extends BaseTest{
         insertAuthScreen insertAuthobject = insertEmailObject.clickContinue();
         // TimeUnit.SECONDS.sleep(20);
         insertAuthobject.insertAuth("W89W2");
-        eventsScreen eventobj =insertAuthobject.clickContinue();
+        AlleventsScreen eventobj =insertAuthobject.clickContinue();
         //TimeUnit.SECONDS.sleep(20);
         eventobj.allownotification();
         //TimeUnit.SECONDS.sleep(20);

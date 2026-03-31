@@ -14,9 +14,9 @@ public class eventActionSheetScreen {
         this.wait=wait;
     }
 
-    public TestNameEmailEventScreen captureEvEvent(){
+    public EventCapture captureEvEvent(){
         wait.waitForVisibility(evEventActionsheetCaptureXpath,5).click();
-        return new TestNameEmailEventScreen(driver,wait);
+        return new EventCapture(driver,wait);
     }
 
 

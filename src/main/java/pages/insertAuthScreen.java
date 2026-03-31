@@ -2,9 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.WaitHelper;
 
 public class insertAuthScreen {
@@ -26,8 +23,8 @@ public class insertAuthScreen {
     }
 
 
-    public eventsScreen clickContinue(){
+    public AlleventsScreen clickContinue(){
         wait.waitForVisibility(loginXpath,10).click();
-        return new eventsScreen(driver,wait);
+        return new AlleventsScreen(driver,wait);
     }
 }

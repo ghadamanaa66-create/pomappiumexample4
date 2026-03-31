@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.WaitHelper;
 
-public class TestNameEmailEventScreen {
+public class EventCapture {
 
     WebDriver driver;
     WaitHelper wait;
@@ -13,7 +13,7 @@ public class TestNameEmailEventScreen {
     By lnameXpath = By.xpath("//android.widget.EditText[@resource-id=\"ion-input-15\"]");
     By submitXpath =By.xpath("(//android.widget.Button[@text=\"Submit\"])[1]");
     By backXpath =By.xpath("//android.widget.Button[@content-desc=\"Back\"]");
-    public TestNameEmailEventScreen(WebDriver driver, WaitHelper wait) {
+    public EventCapture(WebDriver driver, WaitHelper wait) {
         this.driver = driver;
         this.wait =wait;
     }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.WaitHelper;
 
-public class TestNameEmailReviewScreen {
+public class ReviewSubmssion {
     WebDriver driver;
     WaitHelper wait;
     By emailxpath=By.xpath("//android.widget.EditText[@text='xx@xx.com']");
@@ -13,7 +13,7 @@ public class TestNameEmailReviewScreen {
     By lname=By.xpath("//android.widget.EditText[@text='lname']");
     By EditXpath=By.xpath("//android.widget.Button[@text=\"Edit\"]");
 
-    public TestNameEmailReviewScreen(WebDriver driver, WaitHelper wait){
+    public ReviewSubmssion(WebDriver driver, WaitHelper wait){
         this.driver = driver;
         this.wait =wait;
     }
