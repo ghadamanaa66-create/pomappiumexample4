@@ -6,9 +6,7 @@ import pages.*;
 import pages.ReviewSubmssion;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Scanner;
-import io.appium.java_client.android.AndroidDriver;
+
 
 import utils.WaitHelper;
 public class BaseTest {
@@ -40,7 +38,7 @@ public class BaseTest {
                 .setAppPackage("com.leadliaison.captello")
                 .setAppActivity("com.leadliaison.captello.MainActivity");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-        WaitHelper wait=new WaitHelper(driver);
+        wait=new WaitHelper(driver);
         insertEmailObject = new insertEmailScreen(driver,wait);
         testNameEmailEventScreenObject = new EventCapture(driver,wait);
         testNameEmailReviewScreenObject = new ReviewSubmssion(driver,wait);
