@@ -30,21 +30,21 @@ public class insertEmailScreen {
 
    public insertAuthScreen clickContinue(){
         //driver.findElement(continueClassName).click();
-       wait.waitForClickable(continueClassName,10).click();
+       wait.waitForClickable(continueClassName,30).click();
        return new insertAuthScreen(driver,wait);
    }
 
    public void clickLogo(){
 
-       wait.waitForClickable(logoXpath,10).click();
+       wait.waitForClickable(logoXpath,30).click();
    }
 
    public void clickArrow(){
-       wait.waitForClickable(arrowIconXpath,10).click();
+       wait.waitForClickable(arrowIconXpath,30).click();
    }
 
    public void clickSandbox(){
-       wait.waitForClickable(sandboxXpath,10).click();
+       wait.waitForClickable(sandboxXpath,30).click();
    }
 }
 

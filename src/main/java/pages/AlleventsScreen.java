@@ -19,19 +19,19 @@ public class AlleventsScreen {
     }
 
     public void allownotification(){
-        wait.waitForVisibility(allowNotificationXpath,5).click();
+        wait.waitForVisibility(allowNotificationXpath,50).click();
     }
 
     public WebElement getleftmenuxpath(){
-        WebElement leftmenueiconeElement= wait.waitForVisibility(leftmenuiconXpath,5);
+        WebElement leftmenueiconeElement= wait.waitForVisibility(leftmenuiconXpath,50);
         return leftmenueiconeElement;
     }
     public void clickeventev(){
-        wait.waitForVisibility(evEventXpath,10).click();
+        wait.waitForVisibility(evEventXpath,50).click();
     }
 
     public AllLeads clickleadsArrow(){
-        wait.waitForVisibility(leadslinkXpath,10).click();
+        wait.waitForVisibility(leadslinkXpath,50).click();
         return new AllLeads(driver,wait);
     }
 

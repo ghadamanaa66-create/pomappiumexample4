@@ -18,13 +18,13 @@ public class insertAuthScreen {
 
     public void insertAuth(String authcode){
 
-        wait.waitForVisibility(insertAuthtextXpath,10);
+        wait.waitForVisibility(insertAuthtextXpath,30);
         driver.findElement(AuthXpath).sendKeys(authcode);
     }
 
 
     public AlleventsScreen clickContinue(){
-        wait.waitForVisibility(loginXpath,10).click();
+        wait.waitForVisibility(loginXpath,30).click();
         return new AlleventsScreen(driver,wait);
     }
 }

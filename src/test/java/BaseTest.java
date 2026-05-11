@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
+import utils.ScrollHelper;
 import utils.WaitHelper;
 public class BaseTest {
 
@@ -17,34 +18,39 @@ public class BaseTest {
     protected ReviewSubmssion testNameEmailReviewScreenObject;
     protected eventActionSheetScreen eventActionSheetScreenObject;
     public static WaitHelper wait;
+    public static ScrollHelper scroll;
     protected AlleventsScreen eventsScreenObject;
     protected EventCapture TestNameEmailEventScreenObject;
     protected AllLeads TestNameEmailLeadsScreenObject;
 
     @BeforeClass(alwaysRun = true)
     public  void setUp() throws MalformedURLException {
-      /*UiAutomator2Options options = new UiAutomator2Options()
+   /*   UiAutomator2Options options = new UiAutomator2Options()
                 .setPlatformName("Android")
                 .setAutomationName("UiAutomator2")
                 .setDeviceName("Redmi")
                 .setAppPackage("com.leadliaison.captello")
                 .setAppActivity("com.leadliaison.captello.MainActivity");
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);*/
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options); */
 
         UiAutomator2Options options = new UiAutomator2Options()
                 .setPlatformName("Android")
                 .setDeviceName("emulator-5554")
                 .setAutomationName("UiAutomator2")
                 .setAppPackage("com.leadliaison.captello")
+                .setApp("C:\\New folder\\app.apk")
                 .setAppActivity("com.leadliaison.captello.MainActivity");
+
+
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         wait=new WaitHelper(driver);
+        scroll=new ScrollHelper(driver);
         insertEmailObject = new insertEmailScreen(driver,wait);
-        testNameEmailEventScreenObject = new EventCapture(driver,wait);
+        testNameEmailEventScreenObject = new EventCapture(driver,wait,scroll);
         testNameEmailReviewScreenObject = new ReviewSubmssion(driver,wait);
         eventActionSheetScreenObject  = new eventActionSheetScreen(driver,wait);
         eventsScreenObject = new AlleventsScreen(driver, wait);
-        TestNameEmailEventScreenObject = new EventCapture(driver,wait);
+        TestNameEmailEventScreenObject = new EventCapture(driver,wait,scroll);
         TestNameEmailLeadsScreenObject = new AllLeads(driver,wait);
         login ();
 

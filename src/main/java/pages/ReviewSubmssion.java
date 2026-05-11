@@ -10,7 +10,7 @@ public class ReviewSubmssion {
     WaitHelper wait;
     By emailxpath=By.xpath("//android.widget.EditText[@text='xx@xx.com']");
     By fnamexpath=By.xpath("//android.widget.EditText[@text='fname']");
-    By lname=By.xpath("//android.widget.EditText[@text='lname']");
+    By lname=By.xpath("//android.widget.EditText[@text='lastname']");
     By EditXpath=By.xpath("//android.widget.Button[@text=\"Edit\"]");
 
     public ReviewSubmssion(WebDriver driver, WaitHelper wait){

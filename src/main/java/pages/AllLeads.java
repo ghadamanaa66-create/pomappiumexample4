@@ -15,7 +15,7 @@ public class AllLeads {
     }
 
     public ReviewSubmssion viewLatesSubmission(){
-        wait.waitForVisibility(LatestSubXpath,10).click();
+        wait.waitForVisibility(LatestSubXpath,50).click();
       return new ReviewSubmssion(driver,wait);
     }
 }

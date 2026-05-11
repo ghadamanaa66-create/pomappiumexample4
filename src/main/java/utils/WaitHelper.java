@@ -1,7 +1,10 @@
 package utils;
+import io.appium.java_client.AppiumBy;
 import  org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
 import java.time.Duration;
+import java.util.List;
+
 public class WaitHelper {
     private WebDriver driver;
 
@@ -36,4 +39,13 @@ public class WaitHelper {
                 .ignoring(StaleElementReferenceException.class)
                 .until(ExpectedConditions.presenceOfElementLocated(locator));
     }
+
+
+    public List<WebElement> waitForVisibilityalloptionsforcheckbox(By locator, int timeoutInSeconds) {
+        return new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
+                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+    }
+
+
+
 }

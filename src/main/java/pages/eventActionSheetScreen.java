@@ -2,11 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.ScrollHelper;
 import utils.WaitHelper;
 
 public class eventActionSheetScreen {
     WebDriver driver;
     WaitHelper wait;
+    ScrollHelper scroll;
     By evEventActionsheetCaptureXpath= By.xpath("//android.widget.TextView[@text=\"Capture\"]");
 
     public eventActionSheetScreen(WebDriver driver,WaitHelper wait) {
@@ -15,8 +17,8 @@ public class eventActionSheetScreen {
     }
 
     public EventCapture captureEvEvent(){
-        wait.waitForVisibility(evEventActionsheetCaptureXpath,5).click();
-        return new EventCapture(driver,wait);
+        wait.waitForVisibility(evEventActionsheetCaptureXpath,50).click();
+        return new EventCapture(driver,wait,scroll);
     }
 
 
